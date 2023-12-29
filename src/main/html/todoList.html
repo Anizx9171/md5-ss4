@@ -76,7 +76,7 @@
 
 <script>
     async function getTodos() {
-        const response = await fetch("http://localhost:8081/todos");
+        const response = await fetch("http://localhost:9171/todos");
         const todos = await response.json();
         let html = ``;
         todos.forEach((element) => {
@@ -112,7 +112,7 @@
         let todo_name = document.getElementById("todo-name").value;
         let data = JSON.stringify({ todo: todo_name, status: true });
 
-        fetch("http://localhost:8081/todos", {
+        fetch("http://localhost:9171/todos", {
             method: "POST",
             headers: {
                 Accept: "application/json",
@@ -176,7 +176,7 @@
         };
 
         try {
-            const response = await fetch(`http://localhost:8081/todos/${id}`, {
+            const response = await fetch(`http://localhost:9171/todos/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -200,7 +200,7 @@
         todoElement.classList.toggle("completed");
         const todo = { status: false };
         try {
-            const response = await fetch(`http://localhost:8081/todos/${id}`, {
+            const response = await fetch(`http://localhost:9171/todos/${id}`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json",
