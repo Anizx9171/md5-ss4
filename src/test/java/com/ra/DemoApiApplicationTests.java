@@ -1,10 +1,10 @@
-package com.example.ss4;
+package com.ra;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Ss4ApplicationTests {
+class DemoApiApplicationTests {
 
     @Test
     void contextLoads() {
